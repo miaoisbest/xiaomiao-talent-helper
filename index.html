@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f7efe3" />
-  <meta name="description" content="小妙得意的奇思妙想站：小妙助手与小妙竞标保安 Windows 工具官方下载、使用教程与更新说明。" />
+  <meta name="description" content="小妙得意的奇思妙想站：小妙助手、小妙竞标保安公会版与个人版 Windows 工具官方下载、使用教程与更新说明。" />
   <title>小妙得意的奇思妙想站 · XiaoMiao Tools</title>
   <link rel="icon" type="image/png" href="https://miaoisbest.github.io/xiaomiao-talent-helper/assets/xiaomiao-logo.png" />
   <style>
@@ -12,7 +12,7 @@
       --paper:#fbf6ee;--paper-2:#f3e7d6;--paper-3:#efe0cb;--ink:#39271f;--muted:#78665a;
       --brown:#8b4027;--brown-2:#ad5b35;--gold:#c79348;--gold-2:#e1bd78;--line:rgba(103,70,44,.14);
       --card:rgba(255,253,249,.74);--shadow:0 18px 50px rgba(77,48,27,.11);
-      --guard:#70548f;--guard-soft:#eee6f5;--guard-line:rgba(112,84,143,.18);--success:#55a372;
+      --guard:#70548f;--guard-soft:#eee6f5;--guard-line:rgba(112,84,143,.18);--personal:#a45d78;--personal-soft:#f7e9ef;--personal-line:rgba(164,93,120,.18);--success:#55a372;
     }
     *{box-sizing:border-box}html{scroll-behavior:smooth}
     body{margin:0;color:var(--ink);font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",system-ui,-apple-system,sans-serif;background:radial-gradient(circle at 7% -5%,rgba(223,185,112,.34),transparent 31%),radial-gradient(circle at 95% 8%,rgba(163,80,45,.085),transparent 25%),linear-gradient(180deg,#fffaf3 0%,var(--paper) 45%,#f8f0e7 100%);min-height:100vh}
@@ -31,26 +31,26 @@
     h1{font-size:clamp(38px,4.4vw,62px);line-height:1.09;margin:19px 0 8px;letter-spacing:-.04em;font-weight:900}.hero-en{font-size:13px;letter-spacing:.12em;color:#a1785e;font-weight:800;margin-bottom:15px}.hero-slogan{font-size:19px;font-weight:850;color:#604537;margin:0 0 5px}.hero-slogan-en{font-size:12.5px;color:#a38d7e;margin:0 0 18px;letter-spacing:.02em}.hero-subtitle{font-size:17px;font-weight:850;color:#6f4a39;margin:0 0 13px}.lead{font-size:16px;line-height:1.8;color:#725f52;max-width:640px;margin:0 0 22px}
     .actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.btn{border:0;border-radius:13px;padding:13px 18px;font-size:15px;font-weight:850;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s ease;min-height:48px}.btn:hover{transform:translateY(-1px)}.btn-primary{color:#fff;background:linear-gradient(135deg,var(--brown),#a44e2e 62%,#bd6a40);box-shadow:0 11px 25px rgba(132,63,39,.21)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 15px 31px rgba(132,63,39,.28)}.btn-secondary{background:rgba(255,255,255,.64);border:1px solid var(--line);color:#5d493d}.btn-secondary:hover{background:#fff}.btn-guard{color:#fff;background:linear-gradient(135deg,#654b82,#8468a3);box-shadow:0 11px 25px rgba(90,65,115,.18)}.btn-disabled{opacity:.48;cursor:not-allowed;pointer-events:none}
     .product-stage{position:relative;min-height:440px;display:flex;align-items:center;justify-content:center;padding:12px 0}.halo{position:absolute;width:390px;height:390px;border-radius:50%;background:radial-gradient(circle,rgba(229,188,115,.34),rgba(229,188,115,0) 70%);filter:blur(9px)}
-    .preview-window{position:absolute;width:min(420px,88%);border:1px solid rgba(112,76,47,.16);border-radius:24px;padding:17px;background:linear-gradient(145deg,rgba(255,253,248,.94),rgba(248,237,222,.88));box-shadow:0 28px 65px rgba(76,46,25,.15);backdrop-filter:blur(12px)}.preview-window.helper{transform:translate(-25px,-24px) rotate(-2.2deg);z-index:2}.preview-window.guard{transform:translate(35px,68px) rotate(2.4deg);z-index:3;background:linear-gradient(145deg,rgba(255,253,248,.96),rgba(240,232,246,.9));border-color:var(--guard-line)}
+    .preview-window{position:absolute;width:min(420px,88%);border:1px solid rgba(112,76,47,.16);border-radius:24px;padding:17px;background:linear-gradient(145deg,rgba(255,253,248,.94),rgba(248,237,222,.88));box-shadow:0 28px 65px rgba(76,46,25,.15);backdrop-filter:blur(12px)}.preview-window.helper{transform:translate(-42px,-54px) rotate(-2.2deg);z-index:2}.preview-window.guard{transform:translate(42px,34px) rotate(2.2deg);z-index:3;background:linear-gradient(145deg,rgba(255,253,248,.96),rgba(240,232,246,.9));border-color:var(--guard-line)}.preview-window.personal{width:min(350px,76%);transform:translate(-54px,128px) rotate(-1.2deg);z-index:4;background:linear-gradient(145deg,rgba(255,253,248,.97),rgba(248,235,240,.93));border-color:var(--personal-line);padding:14px}.preview-window.personal .window-main{grid-template-columns:88px 1fr}.preview-window.personal .side-panel{padding:7px}.preview-window.personal .side-item{padding:6px 6px}.preview-window.personal .main-panel{padding:10px}.preview-window.personal .mock-box{height:48px}.preview-window.personal .mini-tag{left:auto;right:-14px;border-color:var(--personal-line);color:var(--personal)}
     .window-top{display:flex;align-items:center;justify-content:space-between;padding:2px 2px 13px}.window-brand{display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:850}.window-brand img{width:31px;height:31px;border-radius:9px;box-shadow:0 4px 10px rgba(105,65,35,.13)}.window-controls{display:flex;gap:6px}.window-controls i{display:block;width:8px;height:8px;border-radius:50%;background:#d6c8b8}.window-controls i:nth-child(1){background:#cf8d71}.window-controls i:nth-child(2){background:#d6b86f}.window-controls i:nth-child(3){background:#7db78e}
-    .window-main{display:grid;grid-template-columns:104px 1fr;gap:10px}.side-panel,.main-panel{border:1px solid rgba(102,70,45,.11);background:rgba(255,255,255,.55);border-radius:16px}.side-panel{padding:9px}.side-item{padding:8px 8px;border-radius:9px;color:#756257;font-size:11px;margin-bottom:4px}.side-item.active{background:#efe0cd;color:#763d29;font-weight:800}.guard .side-item.active{background:var(--guard-soft);color:#654b82}.main-panel{padding:12px}.mock-title{font-size:12px;font-weight:850;margin-bottom:8px}.mock-box{height:62px;border:1px dashed rgba(139,64,39,.26);border-radius:11px;background:linear-gradient(135deg,rgba(246,235,219,.72),rgba(255,255,255,.7));display:flex;align-items:center;justify-content:center;color:#9a8575;font-size:11px}.guard .mock-box{border-color:rgba(112,84,143,.24);background:linear-gradient(135deg,rgba(238,230,245,.8),rgba(255,255,255,.72))}.mock-row{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:8px}.mock-stat{padding:8px;border-radius:10px;background:#f7efe4;font-size:10px;color:#796459}.guard .mock-stat{background:#f4eef8}.mock-actions{display:flex;gap:7px;margin-top:9px}.mock-btn{flex:1;text-align:center;padding:8px;border-radius:9px;font-size:10px;font-weight:800;background:#873f27;color:white}.guard .mock-btn{background:#70548f}.mock-btn.alt{background:#eee0cf;color:#654c3e}.guard .mock-btn.alt{background:#eee7f3;color:#675578}.mini-tag{position:absolute;left:-18px;bottom:-14px;padding:9px 12px;border-radius:13px;background:rgba(255,252,246,.94);border:1px solid var(--line);box-shadow:0 12px 28px rgba(72,43,24,.11);font-size:10.5px;color:#70584b;font-weight:800}.guard .mini-tag{left:auto;right:-18px;border-color:var(--guard-line);color:#675578}
+    .window-main{display:grid;grid-template-columns:104px 1fr;gap:10px}.side-panel,.main-panel{border:1px solid rgba(102,70,45,.11);background:rgba(255,255,255,.55);border-radius:16px}.side-panel{padding:9px}.side-item{padding:8px 8px;border-radius:9px;color:#756257;font-size:11px;margin-bottom:4px}.side-item.active{background:#efe0cd;color:#763d29;font-weight:800}.guard .side-item.active{background:var(--guard-soft);color:#654b82}.personal .side-item.active{background:var(--personal-soft);color:#914f68}.main-panel{padding:12px}.mock-title{font-size:12px;font-weight:850;margin-bottom:8px}.mock-box{height:62px;border:1px dashed rgba(139,64,39,.26);border-radius:11px;background:linear-gradient(135deg,rgba(246,235,219,.72),rgba(255,255,255,.7));display:flex;align-items:center;justify-content:center;color:#9a8575;font-size:11px}.guard .mock-box{border-color:rgba(112,84,143,.24);background:linear-gradient(135deg,rgba(238,230,245,.8),rgba(255,255,255,.72))}.personal .mock-box{border-color:var(--personal-line);background:linear-gradient(135deg,rgba(247,233,239,.82),rgba(255,255,255,.74))}.mock-row{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:8px}.mock-stat{padding:8px;border-radius:10px;background:#f7efe4;font-size:10px;color:#796459}.guard .mock-stat{background:#f4eef8}.personal .mock-stat{background:#faeef3}.mock-actions{display:flex;gap:7px;margin-top:9px}.mock-btn{flex:1;text-align:center;padding:8px;border-radius:9px;font-size:10px;font-weight:800;background:#873f27;color:white}.guard .mock-btn{background:#70548f}.personal .mock-btn{background:#a45d78}.mock-btn.alt{background:#eee0cf;color:#654c3e}.guard .mock-btn.alt{background:#eee7f3;color:#675578}.personal .mock-btn.alt{background:#f7e9ef;color:#8e5269}.mini-tag{position:absolute;left:-18px;bottom:-14px;padding:9px 12px;border-radius:13px;background:rgba(255,252,246,.94);border:1px solid var(--line);box-shadow:0 12px 28px rgba(72,43,24,.11);font-size:10.5px;color:#70584b;font-weight:800}.guard .mini-tag{left:auto;right:-18px;border-color:var(--guard-line);color:#675578}
     .quickbar{display:grid;grid-template-columns:1.25fr 1fr 1fr 1fr;gap:10px;margin-top:-4px;margin-bottom:18px}.quick-item{background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:16px;padding:15px 16px;display:flex;align-items:center;gap:11px}.quick-icon{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:#f2e1ca;color:#7f422b;font-weight:900}.quick-item strong{display:block;font-size:13px}.quick-item span{font-size:11.5px;color:var(--muted)}
     .section{padding:44px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:20px}.section-title{font-size:28px;margin:0 0 7px;letter-spacing:-.025em}.section-sub{color:var(--muted);margin:0;line-height:1.65;font-size:13.5px}
-    .tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.tool-card{position:relative;overflow:hidden;padding:25px;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.64);box-shadow:0 12px 36px rgba(77,49,27,.06)}.tool-card:after{content:attr(data-mark);position:absolute;right:-8px;bottom:-65px;font-family:"STKaiti","KaiTi",serif;font-size:190px;color:rgba(129,67,38,.035);transform:rotate(-7deg);pointer-events:none}.tool-card.guard-card{border-color:var(--guard-line);background:linear-gradient(145deg,rgba(255,255,255,.7),rgba(242,235,247,.7))}.tool-card.guard-card:after{color:rgba(102,75,130,.045)}.tool-kicker{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.11em;font-weight:900;color:#9a673c}.guard-card .tool-kicker{color:#70548f}.tool-card h3{font-size:27px;margin:12px 0 3px}.tool-en{font-size:11.5px;letter-spacing:.06em;color:#9d8779;margin-bottom:13px}.tool-desc{font-size:14px;line-height:1.75;color:#6e5b4f;max-width:92%;margin:0 0 13px}.tool-line{font-weight:850;color:#694332;margin:0 0 14px;font-size:14px}.guard-card .tool-line{color:#654b82}.tag-row{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0 21px}.tag{font-size:11px;padding:6px 10px;border-radius:999px;background:#f5eadb;color:#78533d;border:1px solid rgba(129,86,52,.1)}.guard-card .tag{background:#eee6f5;color:#675578;border-color:var(--guard-line)}.tool-actions{display:flex;gap:9px;flex-wrap:wrap;position:relative;z-index:2}.tool-status{margin-top:13px;color:#8a7668;font-size:11.5px;display:flex;gap:10px;flex-wrap:wrap}.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#d5b778;margin-right:5px}.status-dot.ready{background:var(--success)}
-    .choose-card{display:grid;grid-template-columns:1fr 1px 1fr;gap:24px;align-items:stretch;padding:27px;border:1px solid var(--line);border-radius:23px;background:linear-gradient(135deg,rgba(255,253,249,.82),rgba(247,238,226,.72));box-shadow:0 10px 32px rgba(77,49,27,.05)}.choose-divider{background:var(--line)}.choose-item{padding:4px 8px}.choose-item .choose-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:#f2e1ca;color:#7f422b;font-weight:900;margin-bottom:13px}.choose-item.guard-choice .choose-icon{background:var(--guard-soft);color:var(--guard)}.choose-item h3{font-size:18px;margin:0 0 7px}.choose-item p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.choose-bottom{text-align:center;margin-top:13px;color:#8b7567;font-size:12px;font-weight:700}
-    .switcher{display:inline-flex;padding:4px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.58);gap:3px}.switcher button{border:0;background:transparent;padding:9px 13px;border-radius:10px;color:#7d695d;font-weight:800;font-size:12.5px;cursor:pointer}.switcher button.active{background:#fff;box-shadow:0 5px 14px rgba(77,48,27,.09);color:#75412c}.switcher button[data-product="guard"].active{background:#f6f0fa;color:#654b82}
-    .guide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{position:relative;padding:20px 18px 18px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:18px;min-height:158px}.step-no{font-size:11px;letter-spacing:.12em;color:var(--gold);font-weight:900;margin-bottom:12px}.step strong{display:block;font-size:15px;margin-bottom:7px}.step p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.65}.guard-steps .step{border-color:var(--guard-line);background:rgba(252,249,253,.74)}.guard-steps .step-no{color:#7b5d98}.guide-tip{margin-top:12px;display:flex;align-items:flex-start;gap:10px;padding:13px 15px;border-radius:14px;background:linear-gradient(135deg,rgba(255,249,240,.8),rgba(241,225,203,.65));border:1px solid rgba(151,91,49,.13);font-size:12.5px;color:#6d594c;line-height:1.6}.guide-tip.guard-tip{background:linear-gradient(135deg,rgba(248,243,251,.88),rgba(239,231,246,.72));border-color:var(--guard-line);color:#665874}.tip-dot{width:7px;height:7px;flex:none;margin-top:6px;border-radius:50%;background:#b7653d}.guard-tip .tip-dot{background:#80629c}
-    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.feature-grid.guard-features{grid-template-columns:repeat(4,1fr)}.feature-card{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 10px 30px rgba(77,49,27,.05);min-height:178px}.feature-card:after{content:attr(data-mark);position:absolute;right:5px;bottom:-24px;font-family:"STKaiti","KaiTi",serif;font-size:92px;color:rgba(129,67,38,.045);transform:rotate(-5deg)}.feature-icon{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#fff7e9,#efdbbc);border:1px solid rgba(190,142,71,.18);font-size:18px;margin-bottom:14px}.guard-features .feature-card{border-color:var(--guard-line);background:rgba(252,249,253,.74)}.guard-features .feature-icon{background:linear-gradient(145deg,#faf6fc,#e9def1);border-color:var(--guard-line);color:#654b82}.feature-card h3{margin:0 0 7px;font-size:16px}.feature-card p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.7;max-width:92%}
+    .tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.tool-card{position:relative;overflow:hidden;padding:25px;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.64);box-shadow:0 12px 36px rgba(77,49,27,.06)}.tool-card:after{content:attr(data-mark);position:absolute;right:-8px;bottom:-65px;font-family:"STKaiti","KaiTi",serif;font-size:190px;color:rgba(129,67,38,.035);transform:rotate(-7deg);pointer-events:none}.tool-card.guard-card{border-color:var(--guard-line);background:linear-gradient(145deg,rgba(255,255,255,.7),rgba(242,235,247,.7))}.tool-card.guard-card:after{color:rgba(102,75,130,.045)}.tool-card.personal-card{border-color:var(--personal-line);background:linear-gradient(145deg,rgba(255,255,255,.72),rgba(250,239,244,.76))}.tool-card.personal-card:after{color:rgba(164,93,120,.05)}.tool-kicker{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.11em;font-weight:900;color:#9a673c}.guard-card .tool-kicker{color:#70548f}.personal-card .tool-kicker{color:var(--personal)}.tool-card h3{font-size:27px;margin:12px 0 3px}.tool-en{font-size:11.5px;letter-spacing:.06em;color:#9d8779;margin-bottom:13px}.tool-desc{font-size:14px;line-height:1.75;color:#6e5b4f;max-width:92%;margin:0 0 13px}.tool-line{font-weight:850;color:#694332;margin:0 0 14px;font-size:14px}.guard-card .tool-line{color:#654b82}.personal-card .tool-line{color:#914f68}.tag-row{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0 21px}.tag{font-size:11px;padding:6px 10px;border-radius:999px;background:#f5eadb;color:#78533d;border:1px solid rgba(129,86,52,.1)}.guard-card .tag{background:#eee6f5;color:#675578;border-color:var(--guard-line)}.personal-card .tag{background:var(--personal-soft);color:#8f5268;border-color:var(--personal-line)}.tool-actions{display:flex;gap:9px;flex-wrap:wrap;position:relative;z-index:2}.tool-status{margin-top:13px;color:#8a7668;font-size:11.5px;display:flex;gap:10px;flex-wrap:wrap}.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#d5b778;margin-right:5px}.status-dot.ready{background:var(--success)}
+    .choose-card{display:grid;grid-template-columns:1fr 1px 1fr 1px 1fr;gap:24px;align-items:stretch;padding:27px;border:1px solid var(--line);border-radius:23px;background:linear-gradient(135deg,rgba(255,253,249,.82),rgba(247,238,226,.72));box-shadow:0 10px 32px rgba(77,49,27,.05)}.choose-divider{background:var(--line)}.choose-item{padding:4px 8px}.choose-item .choose-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:#f2e1ca;color:#7f422b;font-weight:900;margin-bottom:13px}.choose-item.guard-choice .choose-icon{background:var(--guard-soft);color:var(--guard)}.choose-item.personal-choice .choose-icon{background:var(--personal-soft);color:var(--personal)}.choose-item h3{font-size:18px;margin:0 0 7px}.choose-item p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.choose-bottom{text-align:center;margin-top:13px;color:#8b7567;font-size:12px;font-weight:700}
+    .switcher{display:inline-flex;padding:4px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.58);gap:3px}.switcher button{border:0;background:transparent;padding:9px 13px;border-radius:10px;color:#7d695d;font-weight:800;font-size:12.5px;cursor:pointer}.switcher button.active{background:#fff;box-shadow:0 5px 14px rgba(77,48,27,.09);color:#75412c}.switcher button[data-product="guard"].active{background:#f6f0fa;color:#654b82}.switcher button[data-product="personal"].active{background:#fbf0f4;color:#914f68}
+    .guide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{position:relative;padding:20px 18px 18px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:18px;min-height:158px}.step-no{font-size:11px;letter-spacing:.12em;color:var(--gold);font-weight:900;margin-bottom:12px}.step strong{display:block;font-size:15px;margin-bottom:7px}.step p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.65}.guard-steps .step{border-color:var(--guard-line);background:rgba(252,249,253,.74)}.guard-steps .step-no{color:#7b5d98}.personal-steps .step{border-color:var(--personal-line);background:rgba(254,249,251,.78)}.personal-steps .step-no{color:var(--personal)}.guide-tip{margin-top:12px;display:flex;align-items:flex-start;gap:10px;padding:13px 15px;border-radius:14px;background:linear-gradient(135deg,rgba(255,249,240,.8),rgba(241,225,203,.65));border:1px solid rgba(151,91,49,.13);font-size:12.5px;color:#6d594c;line-height:1.6}.guide-tip.guard-tip{background:linear-gradient(135deg,rgba(248,243,251,.88),rgba(239,231,246,.72));border-color:var(--guard-line);color:#665874}.guide-tip.personal-tip{background:linear-gradient(135deg,rgba(253,246,249,.9),rgba(247,233,239,.76));border-color:var(--personal-line);color:#775563}.tip-dot{width:7px;height:7px;flex:none;margin-top:6px;border-radius:50%;background:#b7653d}.guard-tip .tip-dot{background:#80629c}.personal-tip .tip-dot{background:var(--personal)}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.feature-grid.guard-features{grid-template-columns:repeat(4,1fr)}.feature-grid.personal-features{grid-template-columns:repeat(4,1fr)}.feature-card{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 10px 30px rgba(77,49,27,.05);min-height:178px}.feature-card:after{content:attr(data-mark);position:absolute;right:5px;bottom:-24px;font-family:"STKaiti","KaiTi",serif;font-size:92px;color:rgba(129,67,38,.045);transform:rotate(-5deg)}.feature-icon{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#fff7e9,#efdbbc);border:1px solid rgba(190,142,71,.18);font-size:18px;margin-bottom:14px}.guard-features .feature-card{border-color:var(--guard-line);background:rgba(252,249,253,.74)}.guard-features .feature-icon{background:linear-gradient(145deg,#faf6fc,#e9def1);border-color:var(--guard-line);color:#654b82}.personal-features .feature-card{border-color:var(--personal-line);background:rgba(254,249,251,.76)}.personal-features .feature-icon{background:linear-gradient(145deg,#fff8fa,#f3dfe7);border-color:var(--personal-line);color:#914f68}.feature-card h3{margin:0 0 7px;font-size:16px}.feature-card p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.7;max-width:92%}
     .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.faq{padding:18px 19px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.55)}.faq strong{display:block;font-size:14px;margin-bottom:7px}.faq p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.7}
     .social-card{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:24px 26px;border-radius:22px;background:linear-gradient(135deg,#4e3127,#79412e);color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}.social-card:after{content:"妙";position:absolute;right:130px;top:-68px;font-family:"STKaiti","KaiTi",serif;font-size:180px;color:rgba(255,255,255,.045);transform:rotate(-7deg)}.social-kicker{font-size:11px;letter-spacing:.16em;color:#e4c8ad;font-weight:900}.social-card h3{font-size:23px;margin:7px 0 5px}.social-card p{margin:0;color:#e5d3c3;font-size:13px;line-height:1.6}.social-btn{position:relative;z-index:2;text-decoration:none;background:#fff8ed;color:#5e3527;border-radius:13px;padding:12px 17px;font-weight:900;font-size:13px;white-space:nowrap}
-    .download-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.download-card{display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:23px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.6);min-height:205px}.download-card.guard-download{border-color:var(--guard-line);background:linear-gradient(145deg,rgba(255,255,255,.7),rgba(243,237,248,.72))}.download-card h3{font-size:20px;margin:0 0 4px}.download-card .download-en{color:#9b8677;font-size:11px;letter-spacing:.05em;margin-bottom:10px}.download-card p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.7}.download-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px}.meta-pill{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border-radius:999px;background:#f6ebdd;font-size:10.5px;color:#7c604f}.guard-download .meta-pill{background:#eee6f5;color:#675578}.download-card .btn{width:100%}
+    .download-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.download-card{display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:23px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.6);min-height:205px}.download-card.guard-download{border-color:var(--guard-line);background:linear-gradient(145deg,rgba(255,255,255,.7),rgba(243,237,248,.72))}.download-card.personal-download{border-color:var(--personal-line);background:linear-gradient(145deg,rgba(255,255,255,.72),rgba(250,239,244,.76))}.download-card h3{font-size:20px;margin:0 0 4px}.download-card .download-en{color:#9b8677;font-size:11px;letter-spacing:.05em;margin-bottom:10px}.download-card p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.7}.download-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px}.meta-pill{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border-radius:999px;background:#f6ebdd;font-size:10.5px;color:#7c604f}.guard-download .meta-pill{background:#eee6f5;color:#675578}.personal-download .meta-pill{background:var(--personal-soft);color:#8f5268}.download-card .btn{width:100%}
     .notice{border:1px solid rgba(156,86,45,.15);background:rgba(255,251,245,.55);border-radius:18px;padding:18px 20px;line-height:1.75;color:#705a4c;font-size:12.5px}.notice strong{color:#663624}.guard-notice{margin-top:10px;border-color:var(--guard-line);background:rgba(246,240,250,.7);color:#665874}.guard-notice strong{color:#654b82}
     footer{padding:26px 0 36px;border-top:1px solid var(--line);color:#907c6e;font-size:11.5px;line-height:1.8;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer-main strong{display:block;color:#7b6557;font-size:12px}.footer-links{display:flex;gap:14px;flex-wrap:wrap}.footer-links a{text-decoration:none}.footer-links a:hover{color:#5f4538}
     .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#392920;color:#fff;padding:11px 16px;border-radius:12px;font-size:12px;opacity:0;pointer-events:none;transition:.25s;box-shadow:0 10px 30px rgba(0,0,0,.18);z-index:60}.toast.show{opacity:1;transform:translate(-50%,0)}.spinner{width:15px;height:15px;border:2px solid rgba(255,255,255,.38);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:none}@keyframes spin{to{transform:rotate(360deg)}}
     .hidden{display:none!important}
-    @media(max-width:1000px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:28px}.product-stage{min-height:430px;grid-row:1}.hero-copy{grid-row:2}.quickbar{grid-template-columns:1fr 1fr}.guide-grid{grid-template-columns:1fr 1fr}.feature-grid.guard-features{grid-template-columns:1fr 1fr}.section{padding:38px 0}.hero:after{display:none}}
-    @media(max-width:760px){.tools-grid,.download-grid,.faq-grid{grid-template-columns:1fr}.choose-card{grid-template-columns:1fr;gap:13px}.choose-divider{height:1px}.feature-grid,.feature-grid.guard-features{grid-template-columns:1fr}.hero-en{letter-spacing:.07em}.tool-card h3{font-size:24px}}
-    @media(max-width:650px){.wrap{width:min(100% - 24px,1180px)}nav{height:62px}.brand-text strong{font-size:12px}.brand-text small{display:none}.nav-right .nav-link{display:none}.hero{padding:22px 0 34px;gap:10px}.product-stage{min-height:350px}.preview-window{width:88%;padding:14px}.preview-window.helper{transform:translate(-12px,-28px) rotate(-1.6deg)}.preview-window.guard{transform:translate(18px,55px) rotate(1.8deg)}.mini-tag{display:none}.quickbar{grid-template-columns:1fr}.guide-grid{grid-template-columns:1fr}.social-card{grid-template-columns:1fr}.social-btn{width:100%;text-align:center}.section-title{font-size:24px}.section-head{align-items:start;flex-direction:column}.window-main{grid-template-columns:84px 1fr}.side-panel{padding:7px}.side-item{padding:7px 6px}.nav-download{padding:9px 11px;font-size:12px}.tool-actions .btn{width:100%}.hero-slogan{font-size:17px}}
+    @media(max-width:1000px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:28px}.product-stage{min-height:430px;grid-row:1}.hero-copy{grid-row:2}.quickbar{grid-template-columns:1fr 1fr}.guide-grid{grid-template-columns:1fr 1fr}.feature-grid.guard-features,.feature-grid.personal-features{grid-template-columns:1fr 1fr}.section{padding:38px 0}.hero:after{display:none}}
+    @media(max-width:760px){.tools-grid,.download-grid,.faq-grid{grid-template-columns:1fr}.choose-card{grid-template-columns:1fr;gap:13px}.choose-divider{height:1px}.feature-grid,.feature-grid.guard-features,.feature-grid.personal-features{grid-template-columns:1fr}.hero-en{letter-spacing:.07em}.tool-card h3{font-size:24px}}
+    @media(max-width:650px){.wrap{width:min(100% - 24px,1180px)}nav{height:62px}.brand-text strong{font-size:12px}.brand-text small{display:none}.nav-right .nav-link{display:none}.hero{padding:22px 0 34px;gap:10px}.product-stage{min-height:350px}.preview-window{width:88%;padding:14px}.preview-window.helper{transform:translate(-14px,-70px) rotate(-1.6deg)}.preview-window.guard{transform:translate(18px,20px) rotate(1.7deg)}.preview-window.personal{width:82%;transform:translate(-8px,108px) rotate(-.8deg)}.mini-tag{display:none}.quickbar{grid-template-columns:1fr}.guide-grid{grid-template-columns:1fr}.social-card{grid-template-columns:1fr}.social-btn{width:100%;text-align:center}.section-title{font-size:24px}.section-head{align-items:start;flex-direction:column}.window-main{grid-template-columns:84px 1fr}.side-panel{padding:7px}.side-item{padding:7px 6px}.nav-download{padding:9px 11px;font-size:12px}.tool-actions .btn{width:100%}.hero-slogan{font-size:17px}}
   </style>
 </head>
 <body>
@@ -75,7 +75,7 @@
           <div class="hero-en">XIAOMIAO’S WONDER STATION</div>
           <p class="hero-slogan">把脑袋里的奇思妙想，一件件做出来。</p>
           <p class="hero-slogan-en">Turning little ideas into something real.</p>
-          <p class="lead">为《时光杂货店》玩家制作的一些小工具。<br>从人才资源分配，到公会竞标任务增删，让我们的游戏生活简单点、纯粹点。</p>
+          <p class="lead">为《时光杂货店》玩家制作的一些小工具。<br>从人才资源分配，到公会与个人竞标任务守护，让我们的游戏生活简单点、纯粹点。</p>
           <div class="actions">
             <a class="btn btn-primary" href="#tools">看看有哪些工具 ↓</a>
             <a class="btn btn-secondary" href="#guide">查看使用说明</a>
@@ -93,25 +93,33 @@
             <div class="mini-tag">XiaoMiao Helper 2.0</div>
           </div>
           <div class="preview-window guard">
-            <div class="window-top"><div class="window-brand"><img src="https://miaoisbest.github.io/xiaomiao-talent-helper/assets/xiaomiao-logo.png" alt="妙" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="logo-fallback" style="display:none">妙</span><span>小妙竞标保安 1.0</span></div><div class="window-controls"><i></i><i></i><i></i></div></div>
+            <div class="window-top"><div class="window-brand"><img src="https://miaoisbest.github.io/xiaomiao-talent-helper/assets/xiaomiao-logo.png" alt="妙" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="logo-fallback" style="display:none">妙</span><span>小妙竞标保安 · 公会版</span></div><div class="window-controls"><i></i><i></i><i></i></div></div>
             <div class="window-main">
               <div class="side-panel"><div class="side-item active">任务守护</div><div class="side-item">保留规则</div><div class="side-item">运行监控</div><div class="side-item">竞标赛 2.0</div></div>
               <div class="main-panel"><div class="mock-title">当前守护状态</div><div class="mock-box">识别任务 · 按规则处理</div><div class="mock-row"><div class="mock-stat">页面　已确认</div><div class="mock-stat">F8　随时暂停</div></div><div class="mock-actions"><div class="mock-btn">开始守护</div><div class="mock-btn alt">暂停</div></div></div>
             </div>
-            <div class="mini-tag">XiaoMiao Guild Guard 1.0</div>
+            <div class="mini-tag">XiaoMiao Guild Guard</div>
+          </div>
+          <div class="preview-window personal">
+            <div class="window-top"><div class="window-brand"><img src="https://miaoisbest.github.io/xiaomiao-talent-helper/assets/xiaomiao-logo.png" alt="妙" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="logo-fallback" style="display:none">妙</span><span>小妙竞标保安 · 个人版</span></div><div class="window-controls"><i></i><i></i><i></i></div></div>
+            <div class="window-main">
+              <div class="side-panel"><div class="side-item active">个人任务</div><div class="side-item">处理规则</div><div class="side-item">运行监控</div></div>
+              <div class="main-panel"><div class="mock-title">个人任务守护</div><div class="mock-box">自动识别 · 按规则处理</div><div class="mock-row"><div class="mock-stat">状态　已就绪</div><div class="mock-stat">F8　随时暂停</div></div><div class="mock-actions"><div class="mock-btn">开始守护</div><div class="mock-btn alt">暂停</div></div></div>
+            </div>
+            <div class="mini-tag">XiaoMiao Personal Guard</div>
           </div>
         </div>
       </section>
 
       <div class="quickbar" aria-label="站点信息">
-        <div class="quick-item"><div class="quick-icon">妙</div><div><strong>小妙工具</strong><span>两个 Windows 工具，按需安装</span></div></div>
+        <div class="quick-item"><div class="quick-icon">妙</div><div><strong>小妙工具</strong><span>三个 Windows 工具，按需安装</span></div></div>
         <div class="quick-item"><div class="quick-icon">⌖</div><div><strong>自动识别</strong><span>减少重复查看和手动判断</span></div></div>
         <div class="quick-item"><div class="quick-icon">✓</div><div><strong>云端授权</strong><span>邀请码与设备绑定</span></div></div>
         <div class="quick-item"><div class="quick-icon">↗</div><div><strong>@小妙得意</strong><span>小红书更新与分享</span></div></div>
       </div>
 
       <section class="section" id="tools">
-        <div class="section-head"><div><h2 class="section-title">选择你需要的小妙工具</h2><p class="section-sub">两个工具独立运行，按自己的需要下载安装即可。</p></div></div>
+        <div class="section-head"><div><h2 class="section-title">选择你需要的小妙工具</h2><p class="section-sub">三个工具独立运行，按自己的需要下载安装即可。</p></div></div>
         <div class="tools-grid">
           <article class="tool-card" data-mark="妙">
             <div class="tool-kicker"><span class="status-dot ready"></span>日常工具</div>
@@ -122,32 +130,43 @@
             <div class="tool-actions"><button class="btn btn-primary" data-download="helper"><span class="spinner"></span><span class="download-label">下载小妙助手 ↓</span></button><button class="btn btn-secondary" onclick="selectProduct('helper','features')">查看详细介绍</button></div>
             <div class="tool-status"><span id="helperCardVersion">正在读取最新版</span><span>Windows 10 / 11</span></div>
           </article>
-          <article class="tool-card guard-card" data-mark="守">
+          <article class="tool-card guard-card" data-mark="会">
             <div class="tool-kicker"><span class="status-dot" id="guardStatusDot"></span>公会竞标工具</div>
-            <h3>小妙竞标保安 1.0</h3><div class="tool-en">XiaoMiao Guild Guard 1.0 · Guild Bidding Task Guardian</div>
+            <h3>小妙竞标保安 · 公会版</h3><div class="tool-en">XiaoMiao Guild Guard · Guild Bidding Task Guardian</div>
             <p class="tool-line">把需要的任务留下，把等待交给保安。</p>
-            <p class="tool-desc">自动识别竞标任务，根据设置判断保留或处理，并持续扫描任务页面。支持普通保留规则与公会竞标赛系统 2.0 数据协作。</p>
-            <div class="tag-row"><span class="tag">任务识别</span><span class="tag">自动守护</span><span class="tag">竞标赛系统 2.0</span></div>
-            <div class="tool-actions"><button class="btn btn-guard btn-disabled" data-download="guard"><span class="spinner"></span><span class="download-label">首个正式版待发布</span></button><button class="btn btn-secondary" onclick="selectProduct('guard','guide')">查看使用说明</button></div>
-            <div class="tool-status"><span id="guardCardVersion">等待公开 Release</span><span>Windows 10 / 11 · 官服 PC / 渠道服网页</span></div>
+            <p class="tool-desc">面向公会管理使用，自动识别竞标任务，根据设置判断保留或处理，并支持公会竞标赛系统 2.0 数据协作。</p>
+            <div class="tag-row"><span class="tag">公会竞标</span><span class="tag">自动守护</span><span class="tag">竞标赛系统 2.0</span></div>
+            <div class="tool-actions"><button class="btn btn-guard" data-download="guard"><span class="spinner"></span><span class="download-label">下载公会版 ↓</span></button><button class="btn btn-secondary" onclick="selectProduct('guard','guide')">查看使用说明</button></div>
+            <div class="tool-status"><span id="guardCardVersion">正在读取最新版</span><span>Windows 10 / 11 · 官服 PC / 渠道服网页</span></div>
+          </article>
+          <article class="tool-card personal-card" data-mark="个">
+            <div class="tool-kicker"><span class="status-dot" id="personalStatusDot"></span>个人竞标工具</div>
+            <h3>小妙竞标保安 · 个人版</h3><div class="tool-en">XiaoMiao Personal Guard · Personal Task Guardian</div>
+            <p class="tool-line">个人任务守护工具</p>
+            <p class="tool-desc">面向个人使用，自动识别并处理个人竞标任务，减少反复查看和手动操作，让个人拿皮更省心。</p>
+            <div class="tag-row"><span class="tag">个人任务</span><span class="tag">任务识别</span><span class="tag">自动处理</span></div>
+            <div class="tool-actions"><button class="btn btn-guard" data-download="personal"><span class="spinner"></span><span class="download-label">下载个人版 ↓</span></button><button class="btn btn-secondary" onclick="selectProduct('personal','guide')">查看使用说明</button></div>
+            <div class="tool-status"><span id="personalCardVersion">正在读取最新版</span><span>Windows 10 / 11</span></div>
           </article>
         </div>
       </section>
 
       <section class="section" style="padding-top:10px">
-        <div class="section-head"><div><h2 class="section-title">我应该下载哪一个？</h2><p class="section-sub">用途不同，不需要为了一个功能把两个都装上。</p></div></div>
+        <div class="section-head"><div><h2 class="section-title">我应该下载哪一个？</h2><p class="section-sub">用途不同，按自己的实际需要选择即可。</p></div></div>
         <div class="choose-card">
-          <div class="choose-item"><div class="choose-icon">助</div><h3>日常资源分配 → 小妙助手</h3><p>如果你主要需要人才缘分、农田、澡堂等日常功能，下载小妙助手。</p></div>
+          <div class="choose-item"><div class="choose-icon">助</div><h3>日常资源分配 → 小妙助手</h3><p>需要人才缘分、农田、澡堂等日常资源功能，选择小妙助手。</p></div>
           <div class="choose-divider"></div>
-          <div class="choose-item guard-choice"><div class="choose-icon">守</div><h3>公会竞标任务 → 小妙竞标保安</h3><p>如果你主要负责公会竞标任务管理，需要持续扫描、保留和处理任务，下载竞标保安。</p></div>
+          <div class="choose-item guard-choice"><div class="choose-icon">会</div><h3>公会竞标任务 → 公会版</h3><p>负责公会竞标任务管理，需要持续扫描、保留和处理任务，选择公会版。</p></div>
+          <div class="choose-divider"></div>
+          <div class="choose-item personal-choice"><div class="choose-icon">个</div><h3>个人任务处理 → 个人版</h3><p>需要自动识别并处理个人竞标任务，让个人拿皮更省心，选择个人版。</p></div>
         </div>
-        <div class="choose-bottom">两个都需要，也可以分别安装。两款工具相互独立。</div>
+        <div class="choose-bottom">三款工具相互独立，可以按需分别安装。</div>
       </section>
 
       <section class="section" id="guide">
         <div class="section-head">
           <div><h2 class="section-title">使用教程</h2><p class="section-sub">选择工具查看对应流程。第一次使用都建议先确认识别结果，再正式运行。</p></div>
-          <div class="switcher" aria-label="教程切换"><button class="active" data-product="helper" onclick="switchProduct('guide','helper')">小妙助手</button><button data-product="guard" onclick="switchProduct('guide','guard')">竞标保安</button></div>
+          <div class="switcher" aria-label="教程切换"><button class="active" data-product="helper" onclick="switchProduct('guide','helper')">小妙助手</button><button data-product="guard" onclick="switchProduct('guide','guard')">公会版</button><button data-product="personal" onclick="switchProduct('guide','personal')">个人版</button></div>
         </div>
         <div id="guideHelper">
           <div class="guide-grid">
@@ -160,19 +179,28 @@
         </div>
         <div id="guideGuard" class="hidden">
           <div class="guide-grid guard-steps">
-            <article class="step"><div class="step-no">STEP 01</div><strong>下载安装</strong><p>下载小妙竞标保安 Windows 安装版并完成安装，从桌面启动程序。</p></article>
+            <article class="step"><div class="step-no">STEP 01</div><strong>下载安装</strong><p>下载小妙竞标保安公会版 Windows 安装程序并完成安装，从桌面启动。</p></article>
             <article class="step"><div class="step-no">STEP 02</div><strong>首次绑定</strong><p>输入专属邀请码，选择官服或渠道服，并填写区服、公会名称及会长名称。</p></article>
             <article class="step"><div class="step-no">STEP 03</div><strong>设置守护规则</strong><p>选择需要保留的任务，并根据实际使用方式选择管理删除模式或领取刷新模式。</p></article>
             <article class="step"><div class="step-no">STEP 04</div><strong>框选并开始守护</strong><p>完整框选竞标任务页面，确认识别结果无误后开始运行。F8 可随时暂停。</p></article>
           </div>
           <div class="guide-tip guard-tip"><span class="tip-dot"></span><span><strong>第一次使用：</strong>建议先观察一轮识别与任务判断结果，再开启自动操作。发现页面、识别或点击异常时，立即按 F8 暂停。</span></div>
         </div>
+        <div id="guidePersonal" class="hidden">
+          <div class="guide-grid personal-steps">
+            <article class="step"><div class="step-no">STEP 01</div><strong>下载安装</strong><p>下载小妙竞标保安个人版 Windows 安装程序并完成安装，从桌面启动。</p></article>
+            <article class="step"><div class="step-no">STEP 02</div><strong>完成授权</strong><p>首次启动后按程序提示输入个人版邀请码并完成当前设备验证。</p></article>
+            <article class="step"><div class="step-no">STEP 03</div><strong>设置处理规则</strong><p>根据自己的个人任务需求检查处理规则，确认需要保留或处理的任务范围。</p></article>
+            <article class="step"><div class="step-no">STEP 04</div><strong>框选并开始守护</strong><p>完整框选个人任务页面，确认识别结果无误后开始运行。F8 可随时暂停。</p></article>
+          </div>
+          <div class="guide-tip personal-tip"><span class="tip-dot"></span><span><strong>第一次使用：</strong>建议先观察一轮任务识别和处理结果，确认规则符合自己的需求后再持续运行。</span></div>
+        </div>
       </section>
 
       <section class="section" id="features">
         <div class="section-head">
           <div><h2 class="section-title">核心功能</h2><p class="section-sub">仍然保持小妙工具一贯的原则：看得懂、用得上，不把简单事情做复杂。</p></div>
-          <div class="switcher" aria-label="功能切换"><button class="active" data-product="helper" onclick="switchProduct('features','helper')">小妙助手</button><button data-product="guard" onclick="switchProduct('features','guard')">竞标保安</button></div>
+          <div class="switcher" aria-label="功能切换"><button class="active" data-product="helper" onclick="switchProduct('features','helper')">小妙助手</button><button data-product="guard" onclick="switchProduct('features','guard')">公会版</button><button data-product="personal" onclick="switchProduct('features','personal')">个人版</button></div>
         </div>
         <div id="featuresHelper" class="feature-grid">
           <article class="feature-card" data-mark="缘"><div class="feature-icon">缘</div><h3>人才缘分</h3><p>自动识别当前数据与资源状态，根据识别结果辅助完成判断、操作和人物切换。</p></article>
@@ -185,14 +213,20 @@
           <article class="feature-card" data-mark="守"><div class="feature-icon">守</div><h3>自动守护</h3><p>按当前页面顺序持续扫描和处理任务，并在规则允许时继续检查后续任务。</p></article>
           <article class="feature-card" data-mark="2.0"><div class="feature-icon">2.0</div><h3>公会竞标赛系统 2.0</h3><p>获得权限的公会可同步系统数据，根据成员需求辅助判断当前任务是否值得保留。</p></article>
         </div>
+        <div id="featuresPersonal" class="feature-grid personal-features hidden">
+          <article class="feature-card" data-mark="识"><div class="feature-icon">识</div><h3>个人任务识别</h3><p>自动读取当前个人竞标任务页面，减少反复查看与手动确认。</p></article>
+          <article class="feature-card" data-mark="规"><div class="feature-icon">规</div><h3>处理规则</h3><p>根据个人需求设置任务处理范围，让程序按既定规则继续判断。</p></article>
+          <article class="feature-card" data-mark="自"><div class="feature-icon">自</div><h3>自动处理</h3><p>在识别明确且符合规则时继续处理任务，减少重复点击和人工操作。</p></article>
+          <article class="feature-card" data-mark="监"><div class="feature-icon">监</div><h3>运行监控</h3><p>运行时持续显示当前状态，遇到异常可随时暂停并人工接管。</p></article>
+        </div>
       </section>
 
       <section class="section" id="faq">
         <div class="section-head"><div><h2 class="section-title">常见问题</h2><p class="section-sub">第一次来到这里，先看这几条就够了。</p></div></div>
         <div class="faq-grid">
-          <div class="faq"><strong>两个工具需要一起安装吗？</strong><p>不需要。小妙助手与小妙竞标保安相互独立，只安装自己需要的工具即可。</p></div>
-          <div class="faq"><strong>两个工具的邀请码是同一套吗？</strong><p>不是。两个程序的授权相互独立，请使用对应工具获得的专属邀请码。</p></div>
-          <div class="faq"><strong>竞标保安支持哪些游戏入口？</strong><p>面向 Windows 使用环境，计划同时适配官服 PC 客户端与渠道服网页。以当前公开版本说明为准。</p></div>
+          <div class="faq"><strong>三个工具需要一起安装吗？</strong><p>不需要。小妙助手、公会版和个人版相互独立，只安装自己需要的工具即可。</p></div>
+          <div class="faq"><strong>公会版和个人版是同一个程序吗？</strong><p>不是。两者面向不同使用场景，下载安装和授权都按对应版本进行。</p></div>
+          <div class="faq"><strong>公会版支持哪些游戏入口？</strong><p>面向 Windows 使用环境，计划同时适配官服 PC 客户端与渠道服网页。以当前公开版本说明为准。</p></div>
           <div class="faq"><strong>公会竞标赛系统 2.0 是所有人都能用吗？</strong><p>不是。该数据协作功能只对已获得对应权限的公会开放，普通保安模式可以独立使用。</p></div>
         </div>
       </section>
@@ -212,21 +246,25 @@
             <button class="btn btn-primary" data-download="helper"><span class="spinner"></span><span class="download-label">下载 Windows 安装版 ↓</span></button>
           </article>
           <article class="download-card guard-download">
-            <div><h3>小妙竞标保安 1.0</h3><div class="download-en">XiaoMiao Guild Guard 1.0</div><p>公会竞标任务守护工具。首次使用需要专属邀请码。</p><div class="download-meta"><span class="meta-pill" id="guardDownloadVersion">首个正式版待发布</span><span class="meta-pill">Windows 10 / 11</span><span class="meta-pill">官服 PC / 渠道服网页</span></div></div>
-            <button class="btn btn-guard btn-disabled" data-download="guard"><span class="spinner"></span><span class="download-label">首个正式版待发布</span></button>
+            <div><h3>小妙竞标保安 · 公会版</h3><div class="download-en">XiaoMiao Guild Guard</div><p>公会竞标任务守护工具。首次使用需要对应公会授权。</p><div class="download-meta"><span class="meta-pill" id="guardDownloadVersion">正在读取版本</span><span class="meta-pill">Windows 10 / 11</span><span class="meta-pill">官服 PC / 渠道服网页</span><span class="meta-pill" id="guardSize">安装包</span></div></div>
+            <button class="btn btn-guard" data-download="guard"><span class="spinner"></span><span class="download-label">下载公会版 ↓</span></button>
+          </article>
+          <article class="download-card personal-download">
+            <div><h3>小妙竞标保安 · 个人版</h3><div class="download-en">XiaoMiao Personal Guard</div><p>个人任务守护工具。自动识别并处理个人竞标任务，让个人拿皮更省心。</p><div class="download-meta"><span class="meta-pill" id="personalDownloadVersion">正在读取版本</span><span class="meta-pill">Windows 10 / 11</span><span class="meta-pill" id="personalSize">安装包</span></div></div>
+            <button class="btn btn-guard" data-download="personal"><span class="spinner"></span><span class="download-label">下载个人版 ↓</span></button>
           </article>
         </div>
       </section>
 
       <section class="section" style="padding-top:0">
         <div class="notice"><strong>使用声明</strong><br>小妙系列工具均为个人兴趣制作，仅供个人及获得授权的公会使用。未经允许，禁止出售、转卖、搬运、破解、篡改、重新打包、二次发布及任何形式的商业使用或变相分发。请勿通过非官方页面下载程序，软件更新与使用说明以本网站发布内容为准。</div>
-        <div class="notice guard-notice"><strong>竞标保安使用提示</strong><br>小妙竞标保安涉及游戏内自动操作。使用前请仔细检查保留规则及运行模式，第一次使用建议全程观察。发现异常可随时按 F8 暂停。</div>
+        <div class="notice guard-notice"><strong>竞标保安使用提示</strong><br>小妙竞标保安公会版与个人版均涉及游戏内自动操作。使用前请仔细检查对应规则及运行模式，第一次使用建议全程观察。发现异常可随时按 F8 暂停。</div>
       </section>
     </main>
 
     <footer>
       <div class="footer-main"><strong>© 2026 小妙得意 · XiaoMiao Tools</strong><span>为爱发电，免费分享。</span></div>
-      <span class="footer-links"><a href="https://github.com/miaoisbest/xiaomiao-talent-helper/releases/latest" target="_blank" rel="noopener">小妙助手 Releases</a><a href="https://github.com/miaoisbest/xiaomiao-guild-guard/releases/latest" target="_blank" rel="noopener">竞标保安 Releases</a><a href="https://xhslink.cn/m/43w4DLwxA2s" target="_blank" rel="noopener">小红书主页</a></span>
+      <span class="footer-links"><a href="https://github.com/miaoisbest/xiaomiao-talent-helper/releases/latest" target="_blank" rel="noopener">小妙助手 Releases</a><a href="https://github.com/miaoisbest/xiaomiao-guild-guard/releases/latest" target="_blank" rel="noopener">公会版 Releases</a><a href="https://github.com/miaoisbest/xiaomiao-personal-guard/releases/latest" target="_blank" rel="noopener">个人版 Releases</a><a href="https://xhslink.cn/m/43w4DLwxA2s" target="_blank" rel="noopener">小红书主页</a></span>
     </footer>
   </div>
 
@@ -234,9 +272,10 @@
   <script>
     const PRODUCTS={
       helper:{repo:'miaoisbest/xiaomiao-talent-helper',fallback:'v1.0.1'},
-      guard:{repo:'miaoisbest/xiaomiao-guild-guard',fallback:null}
+      guard:{repo:'miaoisbest/xiaomiao-guild-guard',fallback:null},
+      personal:{repo:'miaoisbest/xiaomiao-personal-guard',fallback:'v1.0.0'}
     };
-    const releaseState={helper:null,guard:null};
+    const releaseState={helper:null,guard:null,personal:null};
     function showToast(text){const t=document.getElementById('toast');t.textContent=text;t.classList.add('show');clearTimeout(window.__toastTimer);window.__toastTimer=setTimeout(()=>t.classList.remove('show'),2600)}
     function formatBytes(bytes){if(!bytes)return'';const mb=bytes/1024/1024;return`${mb.toFixed(mb>=10?1:2)} MB`}
     function switchProduct(section,product){
@@ -244,10 +283,13 @@
       const cap=section.charAt(0).toUpperCase()+section.slice(1);
       document.getElementById(`${section}Helper`).classList.toggle('hidden',product!=='helper');
       document.getElementById(`${section}Guard`).classList.toggle('hidden',product!=='guard');
+      document.getElementById(`${section}Personal`).classList.toggle('hidden',product!=='personal');
     }
     function selectProduct(product,section){switchProduct(section,product);document.getElementById(section).scrollIntoView({behavior:'smooth',block:'start'})}
     async function loadProductRelease(key){
-      const cfg=PRODUCTS[key],api=`https://api.github.com/repos/${cfg.repo}/releases/latest`;
+      const cfg=PRODUCTS[key];
+      if(!cfg?.repo){releaseState[key]=null;updateReleaseUI(key,null);return}
+      const api=`https://api.github.com/repos/${cfg.repo}/releases/latest`;
       try{
         const r=await fetch(api,{headers:{Accept:'application/vnd.github+json'}});if(!r.ok)throw new Error(`HTTP ${r.status}`);
         const data=await r.json();const exe=(data.assets||[]).find(a=>/\.exe$/i.test(a.name));
@@ -263,33 +305,40 @@
         document.getElementById('helperDownloadVersion').textContent=`最新公开版 ${tag}`;
         if(state?.asset)document.getElementById('helperSize').textContent=`安装包 ${formatBytes(state.asset.size)}`;
         buttons.forEach(b=>b.classList.remove('btn-disabled'));
+        return;
+      }
+      const isGuild=key==='guard';
+      const dot=document.getElementById(isGuild?'guardStatusDot':'personalStatusDot');
+      const cardVersion=document.getElementById(isGuild?'guardCardVersion':'personalCardVersion');
+      const downloadVersion=document.getElementById(isGuild?'guardDownloadVersion':'personalDownloadVersion');
+      const size=document.getElementById(isGuild?'guardSize':'personalSize');
+      if(state){
+        dot?.classList.add('ready');
+        if(cardVersion)cardVersion.textContent=`最新公开版 ${state.tag}`;
+        if(downloadVersion)downloadVersion.textContent=`最新公开版 ${state.tag}`;
+        if(size&&state.asset)size.textContent=`安装包 ${formatBytes(state.asset.size)}`;
+        buttons.forEach(b=>{b.classList.remove('btn-disabled');const label=b.querySelector('.download-label');if(label)label.textContent=isGuild?'下载公会版 ↓':'下载个人版 ↓'});
       }else{
-        if(state){
-          document.getElementById('guardStatusDot').classList.add('ready');
-          document.getElementById('guardCardVersion').textContent=`最新公开版 ${state.tag}`;
-          document.getElementById('guardDownloadVersion').textContent=`最新公开版 ${state.tag}`;
-          buttons.forEach(b=>{b.classList.remove('btn-disabled');b.querySelector('.download-label').textContent='下载竞标保安 ↓'});
-        }else{
-          document.getElementById('guardCardVersion').textContent='首个正式版待发布';
-          document.getElementById('guardDownloadVersion').textContent='首个正式版待发布';
-        }
+        const fallback=PRODUCTS[key]?.fallback;
+        if(cardVersion)cardVersion.textContent=fallback?`最新公开版 ${fallback}`:'暂时无法读取版本';
+        if(downloadVersion)downloadVersion.textContent=fallback?`最新公开版 ${fallback}`:'暂时无法读取版本';
+        buttons.forEach(b=>{b.classList.remove('btn-disabled');const label=b.querySelector('.download-label');if(label)label.textContent=isGuild?'下载公会版 ↓':'下载个人版 ↓'});
       }
     }
     async function downloadProduct(key,button){
-      if(button.classList.contains('btn-disabled'))return showToast('竞标保安正式 Release 发布后，这里会自动开放下载');
+      if(button.classList.contains('btn-disabled'))return showToast(key==='personal'?'个人版 Release 发布后，这里会自动开放下载':'当前版本暂不可下载');
       const spinner=button.querySelector('.spinner'),label=button.querySelector('.download-label'),old=label.textContent;spinner.style.display='inline-block';label.textContent='正在获取最新版…';
       try{
         if(!releaseState[key])await loadProductRelease(key);
         const state=releaseState[key];
         if(state?.asset){window.location.href=state.asset.browser_download_url}
         else if(state?.url){window.open(state.url,'_blank','noopener');showToast('未找到安装包，已打开最新版本页面')}
-        else if(key==='helper'){window.open(`https://github.com/${PRODUCTS.helper.repo}/releases/latest`,'_blank','noopener');showToast('已打开小妙助手 Releases')}
-        else{showToast('竞标保安首个正式版还没有公开发布')}
+        else if(PRODUCTS[key]?.repo){window.open(`https://github.com/${PRODUCTS[key].repo}/releases/latest`,'_blank','noopener');showToast('已打开对应 Releases 页面')}
       }catch(e){showToast('暂时无法读取最新版本，请稍后再试')}
       finally{setTimeout(()=>{spinner.style.display='none';label.textContent=old},600)}
     }
     document.querySelectorAll('[data-download]').forEach(btn=>btn.addEventListener('click',()=>downloadProduct(btn.dataset.download,btn)));
-    loadProductRelease('helper');loadProductRelease('guard');
+    loadProductRelease('helper');loadProductRelease('guard');loadProductRelease('personal');
   </script>
   <script src="xiaomiao-site-analytics.js"></script>
 </body>
