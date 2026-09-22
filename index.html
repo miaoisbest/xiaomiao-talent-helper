@@ -145,8 +145,8 @@
             <p class="tool-line">个人任务守护工具</p>
             <p class="tool-desc">面向个人使用，自动识别并处理个人竞标任务，减少反复查看和手动操作，让个人拿皮更省心。</p>
             <div class="tag-row"><span class="tag">个人任务</span><span class="tag">任务识别</span><span class="tag">自动处理</span></div>
-            <div class="tool-actions"><button class="btn btn-guard btn-disabled" data-download="personal"><span class="spinner"></span><span class="download-label">个人版待发布</span></button><button class="btn btn-secondary" onclick="selectProduct('personal','guide')">查看使用说明</button></div>
-            <div class="tool-status"><span id="personalCardVersion">等待公开 Release</span><span>Windows 10 / 11</span></div>
+            <div class="tool-actions"><button class="btn btn-guard" data-download="personal"><span class="spinner"></span><span class="download-label">下载个人版 ↓</span></button><button class="btn btn-secondary" onclick="selectProduct('personal','guide')">查看使用说明</button></div>
+            <div class="tool-status"><span id="personalCardVersion">正在读取最新版</span><span>Windows 10 / 11</span></div>
           </article>
         </div>
       </section>
@@ -250,8 +250,8 @@
             <button class="btn btn-guard" data-download="guard"><span class="spinner"></span><span class="download-label">下载公会版 ↓</span></button>
           </article>
           <article class="download-card personal-download">
-            <div><h3>小妙竞标保安 · 个人版</h3><div class="download-en">XiaoMiao Personal Guard</div><p>个人任务守护工具。自动识别并处理个人竞标任务，让个人拿皮更省心。</p><div class="download-meta"><span class="meta-pill" id="personalDownloadVersion">等待公开 Release</span><span class="meta-pill">Windows 10 / 11</span><span class="meta-pill" id="personalSize">安装包</span></div></div>
-            <button class="btn btn-guard btn-disabled" data-download="personal"><span class="spinner"></span><span class="download-label">个人版待发布</span></button>
+            <div><h3>小妙竞标保安 · 个人版</h3><div class="download-en">XiaoMiao Personal Guard</div><p>个人任务守护工具。自动识别并处理个人竞标任务，让个人拿皮更省心。</p><div class="download-meta"><span class="meta-pill" id="personalDownloadVersion">正在读取版本</span><span class="meta-pill">Windows 10 / 11</span><span class="meta-pill" id="personalSize">安装包</span></div></div>
+            <button class="btn btn-guard" data-download="personal"><span class="spinner"></span><span class="download-label">下载个人版 ↓</span></button>
           </article>
         </div>
       </section>
@@ -264,7 +264,7 @@
 
     <footer>
       <div class="footer-main"><strong>© 2026 小妙得意 · XiaoMiao Tools</strong><span>为爱发电，免费分享。</span></div>
-      <span class="footer-links"><a href="https://github.com/miaoisbest/xiaomiao-talent-helper/releases/latest" target="_blank" rel="noopener">小妙助手 Releases</a><a href="https://github.com/miaoisbest/xiaomiao-guild-guard/releases/latest" target="_blank" rel="noopener">公会版 Releases</a><a href="https://xhslink.cn/m/43w4DLwxA2s" target="_blank" rel="noopener">小红书主页</a></span>
+      <span class="footer-links"><a href="https://github.com/miaoisbest/xiaomiao-talent-helper/releases/latest" target="_blank" rel="noopener">小妙助手 Releases</a><a href="https://github.com/miaoisbest/xiaomiao-guild-guard/releases/latest" target="_blank" rel="noopener">公会版 Releases</a><a href="https://github.com/miaoisbest/xiaomiao-personal-guard/releases/latest" target="_blank" rel="noopener">个人版 Releases</a><a href="https://xhslink.cn/m/43w4DLwxA2s" target="_blank" rel="noopener">小红书主页</a></span>
     </footer>
   </div>
 
@@ -273,7 +273,7 @@
     const PRODUCTS={
       helper:{repo:'miaoisbest/xiaomiao-talent-helper',fallback:'v1.0.1'},
       guard:{repo:'miaoisbest/xiaomiao-guild-guard',fallback:null},
-      personal:{repo:null,fallback:null}
+      personal:{repo:'miaoisbest/xiaomiao-personal-guard',fallback:'v1.0.0'}
     };
     const releaseState={helper:null,guard:null,personal:null};
     function showToast(text){const t=document.getElementById('toast');t.textContent=text;t.classList.add('show');clearTimeout(window.__toastTimer);window.__toastTimer=setTimeout(()=>t.classList.remove('show'),2600)}
@@ -319,9 +319,10 @@
         if(size&&state.asset)size.textContent=`安装包 ${formatBytes(state.asset.size)}`;
         buttons.forEach(b=>{b.classList.remove('btn-disabled');const label=b.querySelector('.download-label');if(label)label.textContent=isGuild?'下载公会版 ↓':'下载个人版 ↓'});
       }else{
-        if(cardVersion)cardVersion.textContent=isGuild?'暂时无法读取版本':'等待公开 Release';
-        if(downloadVersion)downloadVersion.textContent=isGuild?'暂时无法读取版本':'等待公开 Release';
-        if(!isGuild)buttons.forEach(b=>b.classList.add('btn-disabled'));
+        const fallback=PRODUCTS[key]?.fallback;
+        if(cardVersion)cardVersion.textContent=fallback?`最新公开版 ${fallback}`:'暂时无法读取版本';
+        if(downloadVersion)downloadVersion.textContent=fallback?`最新公开版 ${fallback}`:'暂时无法读取版本';
+        buttons.forEach(b=>{b.classList.remove('btn-disabled');const label=b.querySelector('.download-label');if(label)label.textContent=isGuild?'下载公会版 ↓':'下载个人版 ↓'});
       }
     }
     async function downloadProduct(key,button){
@@ -332,7 +333,7 @@
         const state=releaseState[key];
         if(state?.asset){window.location.href=state.asset.browser_download_url}
         else if(state?.url){window.open(state.url,'_blank','noopener');showToast('未找到安装包，已打开最新版本页面')}
-        else if(PRODUCTS[key]){window.open(`https://github.com/${PRODUCTS[key].repo}/releases/latest`,'_blank','noopener');showToast('已打开对应 Releases 页面')}
+        else if(PRODUCTS[key]?.repo){window.open(`https://github.com/${PRODUCTS[key].repo}/releases/latest`,'_blank','noopener');showToast('已打开对应 Releases 页面')}
       }catch(e){showToast('暂时无法读取最新版本，请稍后再试')}
       finally{setTimeout(()=>{spinner.style.display='none';label.textContent=old},600)}
     }
